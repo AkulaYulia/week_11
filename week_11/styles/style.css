@@ -1,0 +1,38 @@
+
+.todo_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.form__input {
+  width: 500px;
+  height: 40px;
+  border-radius: 3px;
+}
+.form__btn {
+  width: 100px;
+  height: 50px;
+  background-color: rgba(18, 160, 13, 0.562);
+  color: white;
+  font-weight: 600;
+}
+
+.form__list_task li {
+  list-style: none;
+  width: 400px;
+  height: max-content;
+  border-radius: 5px;
+  padding: 0.5rem;
+}

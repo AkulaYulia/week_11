@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="todo_list">
+      <h1 class="title">ToDo List</h1>
+      <div class="form">
+        <input id="formInput" class="form__input" type="text" placeholder="Введите задачу"/>
+        <button id="formButton" class="form__btn">Добавить</button>
+      </div>
+      <ol id="formListTask" class="form__list_task"></ol>
+    </div>
+    
+    <script>
+  const ButtonElement = document.getElementById("formButton");
+  ButtonElement.addEventListener("click", createTask); //Добавляем функцию-обработчик к событию клика на кнопку (addEventListener)
+  const inputElement = document.getElementById("formInput");
+  const listTasks = document.getElementById("formListTask"); 
+  listTasks.addEventListener("click", createTask); //Добавляем функцию-обработчик к событию клика на список задач (addEventListener)
+
+function createTask() {  
+  const newElement = document.createElement("li"); //Создаем новый элемент списка с помощью метода (createElement)
+  const taskText = inputElement.value;
+  newElement.textContent = taskText; //Присваиваем текст из поля ввода в качестве содержимого новой задачи (textContent)
+  listTasks.append(newElement);  //Добавляем новую задачу в список с помощью метода (append)
+  inputElement.value = ""; 
+}
+createTask();
+
+function checkTask() { 
+  listTask.addEventListener('click', function (event) {
+    console.log(event);
+	if (event.target.tagName === 'LI') { 
+		event.target.classList.toggle('completed');} }); 
+  
+  }
+checkTask()
+
+    </script>
+      </body>
+  </html>
